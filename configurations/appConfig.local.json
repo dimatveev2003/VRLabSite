@@ -1,0 +1,14 @@
+{
+	"buildSettings": {
+		"publicPath": "/",
+		"options": {
+			"minify": false,
+			"maps": true
+		},
+		"widget": {
+			"title": "VR Лаборатория",
+			"appContainterId": "vr-lab-app",
+			"apiEndpoint": ""
+		}
+	}
+}

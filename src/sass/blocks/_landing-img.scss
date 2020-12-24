@@ -1,0 +1,24 @@
+$b: ".landing-img";
+
+#{$b} {
+	padding-top: 0px;
+	padding-bottom: 105px;
+
+	&__inner {
+		text-align: center;
+	}
+
+	&__img-block {
+		text-align: center;
+    }
+    
+    &__img-width {
+        vertical-align: middle;
+        width: 100%;
+        max-width: 1160px;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 940px;
+        }
+    }
+}

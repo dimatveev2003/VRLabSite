@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom",
+      "es2017"
+    ],
+    "jsx": "preserve",
+    "allowJs": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "${workspaceRoot}/build",
+    "experimentalDecorators": true,
+    "baseUrl": "./src",
+    "strictNullChecks": false,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true
+  },
+  "exclude": [
+    "build",
+    "babel_cache",
+    "node_modules"
+  ],
+  "complexityAnalysis.exclude": [
+    "**/node_modules/**"
+  ],
+  "complexityAnalysis.include": [
+    "**/src/**/*.ts",
+    "**/src/**/*.d.ts",
+    "**/src/**/*.tsx",
+    "**/src/**/*.js",
+    "**/src/**/*.jsx"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

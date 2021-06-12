@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"allowSyntheticDefaultImports": true,
+		"jsx": "react",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"mapRoot": "${workspaceRoot}/build",
+		"baseUrl": "./src",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"pretty": true
+	},
+	"exclude": [
+		"build",
+		"babel_cache",
+		"node_modules"
+	],
+	"complexityAnalysis.exclude": [
+		"**/node_modules/**"
+	],
+	"complexityAnalysis.include": [
+		"**/src/**/*.js",
+		"**/src/**/*.jsx"
+	]
+}

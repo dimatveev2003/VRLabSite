@@ -1,28 +1,44 @@
-a,
-b,
-blockquote,
-center,
-code,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-i,
-img,
-p,
-pre,
-span,
-table,
-td,
-th,
-tr,
-u,
-video,
-body {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+	color: inherit;
+	cursor: pointer;
+}
+
+$b: ".vr-site";
+
+#{$b} {
+	&-visible {
+		&-mobile {
+			@include desktop {
+				display: none !important;
+			}
+		}
+		&-mobile-small {
+			@include desktop-and-tablet {
+				display: none !important;
+			}
+		}
+	}
+	&-invisible {
+		&-mobile {
+			@include mobile {
+				display: none !important;
+			}
+		}
+		&-mobile-small {
+			@include mobile-small {
+				display: none !important;
+			}
+		}
+	}
 }

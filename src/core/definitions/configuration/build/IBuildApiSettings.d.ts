@@ -1,0 +1,3 @@
+interface IBuildApiSettings {
+	apiEndpoint: string;
+}

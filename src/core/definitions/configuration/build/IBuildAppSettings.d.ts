@@ -1,0 +1,3 @@
+interface IBuildAppSettings {
+    title: string;
+}

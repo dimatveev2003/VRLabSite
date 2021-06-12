@@ -1,0 +1,11 @@
+{
+	"appSettings": {},
+	"buildSettings": {
+		"api": {
+			"apiEndpoint": "https://localhost:44306/api/v1"
+		},
+		"app": {
+			"title": "Виртуальная лаборатория"
+		}
+	}
+}

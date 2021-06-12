@@ -1,3 +1,6 @@
+@import "variables";
+@import "fonts";
+
 @import "./standard";
 @import "blocks/navigation-bar";
 @import "blocks/t-btn";
@@ -7,3 +10,6 @@
 @import "blocks/main-about";
 @import "blocks/clearfix";
 @import "blocks/main-services";
+@import "blocks/login";
+@import "blocks/registration";
+@import "blocks/password";

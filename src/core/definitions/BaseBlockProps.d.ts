@@ -1,7 +1,7 @@
 /** Базовые свойства компонента */
 interface BaseBlockProps {
 	/** Блок */
-	block?: string;
+	block?: BlockName;
 	/** Элемент */
 	element?: string;
 	/** Модификатор */
@@ -10,4 +10,6 @@ interface BaseBlockProps {
 	isMainBlock?: boolean;
 	/** Внешний класс */
 	externalClass?: string;
+	/** Дочерние элементы */
+	children?: React.ReactNode;
 }

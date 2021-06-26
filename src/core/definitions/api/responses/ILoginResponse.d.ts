@@ -1,0 +1,1 @@
+interface ILoginResponse extends ITokenModel {}

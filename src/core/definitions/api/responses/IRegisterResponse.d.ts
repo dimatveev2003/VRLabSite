@@ -1,0 +1,3 @@
+interface IRegisterResponse {
+	isSuccess: boolean;
+}

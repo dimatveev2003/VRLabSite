@@ -1,4 +1,4 @@
-import { REGISTRATION_SET_VALUE, REGISTRATION_FETCH } from "./registrationActionTypes";
+import { REGISTRATION_SET_VALUE, REGISTRATION_FETCH, REGISTRATION_SUCCESS } from "./registrationActionTypes";
 
 export function setValueCreator(key: string, value: string) {
 	return {
@@ -10,9 +10,18 @@ export function setValueCreator(key: string, value: string) {
 	} as const;
 }
 
-export function fetchAuthCreator(value: boolean) {
+export function fetchRegCreator(value = false) {
 	return {
 		type: REGISTRATION_FETCH,
+		payload: {
+			value
+		}
+	} as const;
+}
+
+export function setSuccessActionCreator(value: boolean) {
+	return {
+		type: REGISTRATION_SUCCESS,
 		payload: {
 			value
 		}

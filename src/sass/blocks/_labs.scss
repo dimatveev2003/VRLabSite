@@ -1,0 +1,190 @@
+$b: ".labs";
+
+#{$b} {
+	padding: 30px 20px;
+
+	&__title {
+		font-family: "Roboto", Arial, sans-serif;
+		color: $darkOrangeColor;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__bundles,
+	&__labs {
+		margin: 20px 0px;
+
+		&_row {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__lab {
+		&_tile {
+			padding: 24px;
+			background: #fefefe;
+			border: 5px double #e2e5eb;
+			box-sizing: border-box;
+			border-radius: 16px;
+
+			width: 25%;
+			min-height: 200px;
+			padding: 10px;
+			margin: 10px 20px;
+			position: relative;
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+
+		&_title {
+			text-align: center;
+			font-family: "Roboto", Arial, sans-serif;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		&_section {
+			text-align: center;
+			font-family: "Roboto", Arial, sans-serif;
+			color: gray;
+			margin-bottom: 20px;
+		}
+
+		&_desc {
+			font-family: "Roboto", Arial, sans-serif;
+
+			&-tip {
+				padding: 15px;
+				font-family: "Roboto", Arial, sans-serif;
+			}
+		}
+
+		&_video {
+			margin-top: 20px;
+			overflow: hidden;
+			text-align: center;
+			float: left;
+			width: 100%;
+			height: 200px;
+			margin-bottom: 40px;
+		}
+
+		&_price {
+			font-size: 20px;
+			font-weight: 700;
+			font-family: "Roboto", Arial, sans-serif;
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			display: flex;
+		}
+
+		&_cart {
+			margin-left: 5px;
+			cursor: pointer;
+		}
+	}
+
+	&__bundle {
+		&_tile {
+			border: 5px double $baseOrangeColor;
+			border-radius: 10px 20px;
+			width: 25%;
+			min-height: 200px;
+			padding: 10px;
+			margin: 10px 20px;
+			position: relative;
+
+			@media screen and (max-width: 800px) {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+		}
+
+		&_title {
+			text-align: center;
+			color: $darkOrangeColor;
+			font-family: "Roboto", Arial, sans-serif;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		&_desc {
+			color: $darkOrangeColor;
+			font-family: "Roboto", Arial, sans-serif;
+
+			&-tip {
+				padding: 15px;
+				font-family: "Roboto", Arial, sans-serif;
+			}
+		}
+
+		&_price {
+			font-size: 20px;
+			font-weight: 700;
+			font-family: "Roboto", Arial, sans-serif;
+			position: absolute;
+			right: 15px;
+			bottom: 15px;
+			display: flex;
+		}
+
+		&_cart {
+			margin-left: 5px;
+			cursor: pointer;
+		}
+
+		&_lab-list {
+			margin-top: 15px;
+			margin-bottom: 40px;
+			counter-reset: li;
+			list-style: none;
+			font: 14px "Trebuchet MS", "Lucida Sans";
+			padding: 0;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+			a {
+				position: relative;
+				display: block;
+				padding: 0.4em 0.4em 0.4em 0.8em;
+				margin: 0.5em 0 0.5em 2.5em;
+				background: $lightOrangeColor;
+				color: #444;
+				text-decoration: none;
+				transition: all 0.3s ease-out;
+
+				&:before {
+					content: counter(li);
+					counter-increment: li;
+					position: absolute;
+					left: -2.5em;
+					top: 50%;
+					margin-top: -1em;
+					background: $baseOrangeColor;
+					height: 2em;
+					width: 2em;
+					line-height: 2em;
+					text-align: center;
+					font-weight: bold;
+				}
+
+				&:after {
+					position: absolute;
+					content: "";
+					border: 0.5em solid transparent;
+					left: -1em;
+					top: 50%;
+					margin-top: -0.5em;
+					transition: all 0.3s ease-out;
+				}
+			}
+		}
+	}
+}

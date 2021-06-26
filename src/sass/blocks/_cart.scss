@@ -1,0 +1,126 @@
+$b: ".cart";
+
+#{$b} {
+	padding: 30px 20px;
+	font-family: "Roboto", Arial, sans-serif;
+
+	h1 {
+		color: $darkOrangeColor;
+	}
+
+	hr {
+		background: $baseOrangeColor;
+		height: 2px;
+		margin-top: 20px;
+	}
+
+	&__content {
+		margin: 20px 10px;
+	}
+
+	&__empty {
+		min-height: 150px;
+		color: gray;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		a {
+			color: #40538e !important;
+			text-decoration: none;
+			border-bottom: 1px dotted #40538e;
+		}
+	}
+
+    &__button-box {
+		right: 0;
+		margin-top: 50px;
+		display: flex;
+        align-items: center;
+		justify-content: flex-end;
+	}
+
+	&__button {
+		font-family: "Ubuntu-Bold";
+		font-size: 16px;
+		color: #fff;
+		line-height: 1.2;
+		text-transform: uppercase;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 20px;
+		height: 62px;
+		background-color: $darkOrangeColor;
+		border-radius: 3px;
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		transition: all 0.4s;
+
+		&:hover {
+			background-color: #6c2c0c;
+		}
+	}
+
+	&__clear {
+		text-decoration: underline;
+		color: #40538e !important;
+		cursor: pointer;
+		font-family: "Ubuntu-Bold";
+        margin-right: 20px;
+	}
+
+	&__item {
+		display: flex;
+		min-height: 100px;
+		align-items: center;
+		border: 1px solid $lightOrangeColor;
+		padding: 0 20px;
+		margin: 10px 0;
+
+		&_number {
+			padding: 5px 8px;
+			background: $baseOrangeColor;
+			color: white;
+		}
+
+		&_info {
+			margin-left: 150px;
+
+			@media screen and (max-width: 780px) {
+				margin-left: 50px;
+			}
+
+			@media screen and (max-width: 480px) {
+				margin-left: 25px;
+			}
+		}
+
+		&_name {
+			font-size: 24px;
+		}
+
+		&_type {
+			color: gray;
+		}
+
+		&_remove {
+			margin-left: auto;
+			cursor: pointer;
+
+			svg {
+				width: 36px;
+				height: 36px;
+
+				&:hover {
+					fill: $darkOrangeColor;
+				}
+			}
+		}
+	}
+}

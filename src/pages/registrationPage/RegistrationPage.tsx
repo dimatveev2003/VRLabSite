@@ -6,18 +6,34 @@ import BlockName from "core/enum/BlockName";
 import Link from "next/link";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setInputValue } from "./reducer/registrationActions";
+import { registerAction, setInputValueAction, setSuccessAction } from "./reducer/registrationActions";
+import pages from "core/business/pages";
+import ModalPopup from "core/components/base/ModalPopup";
+import { useRouter } from "next/router";
 
 export default () => {
 	const registrationPage = useSelector((state: IGlobalAppState) => state.registrationPage);
 	const dispatch = useDispatch();
+	const router = useRouter();
 
 	const handleChangeValue = (id: string, value: string) => {
-		dispatch(setInputValue(id, value));
+		dispatch(setInputValueAction(id, value));
 	};
+
+	const handleRegisterClick = () => {
+		dispatch(registerAction());
+	};
+
+	const onClosePopup = () => {
+		dispatch(setSuccessAction(false));
+		router.push(pages.login);
+	}
 
 	return (
 		<Block>
+			<ModalPopup onClose={onClosePopup} isOpen={registrationPage.isSuccess} title="Регистрация завершена" hasCloseButton>
+				Регистрация успешно завершена
+			</ModalPopup>
 			<RegistrationBlock element="container">
 				<RegistrationBlock element="wrap-container">
 					<RegistrationBlock element="form">
@@ -81,9 +97,11 @@ export default () => {
 								placeholder="Имя или название организации"
 							/>
 						</RegistrationBlock>
-						<RegistrationBlock element="button">Зарегистрироваться</RegistrationBlock>
+						<RegistrationBlock onClick={handleRegisterClick} element="button">
+							Зарегистрироваться
+						</RegistrationBlock>
 						<RegistrationBlock element="back-link">
-							<Link href="/login">На страницу логина</Link>
+							<Link href={pages.login}>На страницу логина</Link>
 						</RegistrationBlock>
 					</RegistrationBlock>
 				</RegistrationBlock>

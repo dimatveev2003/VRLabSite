@@ -5,8 +5,11 @@ import Motivating from "./components/motivating/Motivating";
 import NavigationBar from "./components/navigation/NavigationBar";
 import Offer from "./components/offer/Offer";
 import Services from "./components/services/Services";
+import { useMainPageInitialize } from "./pageHooks/pageHooks";
 
 export default () => {
+	useMainPageInitialize();
+
 	return (
 		<React.Fragment>
 			<NavigationBar />

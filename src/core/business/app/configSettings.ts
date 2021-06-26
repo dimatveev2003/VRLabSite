@@ -4,7 +4,7 @@ import { isEmpty } from "core/utils/stringExtensions";
  * Дефолтные настройки приложения
  */
 const defaultConfig: IAppSettings = {
-	apiEndpoint: WEBPACK__APP_APIENDPOINT,
+	apiEndpoint: process.env.NEXT_PUBLIC_APP_APIENDPOINT,
 	lang: "ru"
 };
 
@@ -12,7 +12,7 @@ const defaultConfig: IAppSettings = {
  * Инициализирует конфигурацию приложения
  * @param config Конфигурация приложения
  */
-export function createAppConfigSettings(config: IAppSettings): IAppSettings {
+export function createAppConfigSettings(config?: IAppSettings): IAppSettings {
 	if (!config) {
 		return Object.assign({}, defaultConfig);
 	}

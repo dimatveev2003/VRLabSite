@@ -9,6 +9,7 @@ interface InputProps extends BaseBlockProps {
 	id?: string;
 	placeholder?: string;
 	type?: string;
+	isDisabled?: boolean;
 }
 
 export default (props: InputProps) => {
@@ -22,6 +23,7 @@ export default (props: InputProps) => {
 
 	return (
 		<input
+			disabled={props.isDisabled}
 			className={styles}
 			id={props.id}
 			value={props.value}

@@ -5,5 +5,5 @@ interface BlockProps extends BaseBlockProps {}
 export default (props: BlockProps) => {
 	const styles = getBlockStyle(props);
 
-	return <div className={styles}>{props.children}</div>;
+	return <div id={props.id} onClick={props.onClick} className={styles}>{props.children}</div>;
 };

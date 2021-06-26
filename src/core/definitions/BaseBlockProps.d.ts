@@ -12,4 +12,8 @@ interface BaseBlockProps {
 	externalClass?: string;
 	/** Дочерние элементы */
 	children?: React.ReactNode;
+	/** Клик */
+	onClick?: React.MouseEventHandler;
+	/** ID */
+	id?: string;
 }

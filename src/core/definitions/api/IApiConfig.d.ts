@@ -11,7 +11,4 @@ interface IApiConfig {
 
 	/** Авторизационный токен */
 	accessToken: string;
-
-	/** Домен */
-	appDomain: string;
 }

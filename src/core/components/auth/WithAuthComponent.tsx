@@ -6,7 +6,7 @@ import React from "react";
  * Провеерка маршурта с авторизациией
  */
 export default (WrappedComponent: any) => (props: React.PropsWithChildren<any>) => {
-	const { isAuthenticated } = useAppContextProvider();    
+	const { isAuthenticated } = useAppContextProvider();
 
 	/** При каждом рендеринге вызыаем проверку авторизации для редиректа на логинг */
 	React.useEffect(() => {
@@ -15,5 +15,5 @@ export default (WrappedComponent: any) => (props: React.PropsWithChildren<any>) 
 		}
 	});
 
-	return !isAuthenticated() ? null : <WrappedComponent {...props} />;
+	return !isAuthenticated() ? null : WrappedComponent;
 };

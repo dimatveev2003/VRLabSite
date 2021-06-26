@@ -25,7 +25,7 @@ export function getAccessToken() {
  * удаляет токен авторизации
  */
 export function removeAccessToken() {
-	return cookie.remove(AUTH_INFO_KEY, { path: "/" });
+	return cookie.remove(AUTH_INFO_KEY, coockieOptions);
 }
 
 /**

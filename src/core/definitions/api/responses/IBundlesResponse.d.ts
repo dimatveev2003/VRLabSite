@@ -1,0 +1,3 @@
+interface IBundlesResponse {
+    bundles: IBundleModel[];
+}

@@ -37,3 +37,63 @@ export const RegistrationBlock = (props: BaseBlockProps) => (
 		{props.children}
 	</Block>
 );
+
+export const HeaderBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.header} {...props}>
+		{props.children}
+	</Block>
+);
+
+export const HeaderMenuBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.header} element="menu" {...props}>
+		{props.children}
+	</Block>
+);
+
+export const LabsBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.labs} {...props}>
+		{props.children}
+	</Block>
+);
+
+export const LabsLabBlock = (props: BaseBlockProps) => (
+	<Block block={BlockName.labs} element="lab" {...props}>
+		{props.children}
+	</Block>
+);
+
+export const BundleBlock = (props: BaseBlockProps) => (
+	<Block block={BlockName.labs} element="bundle" {...props}>
+		{props.children}
+	</Block>
+);
+
+export const LayoutBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.layout} {...props}>
+		{props.children}
+	</Block>
+);
+
+export const FooterBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.footer} {...props}>
+		{props.children}
+	</Block>
+);
+
+export const CartBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.cart} {...props}>
+		{props.children}
+	</Block>
+);
+
+export const HomeBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.home} {...props}>
+		{props.children}
+	</Block>
+)
+
+export const HomeProfileBlock = (props: BaseBlockProps) => (
+	<Block isMainBlock block={BlockName.home} element="profile" {...props}>
+		{props.children}
+	</Block>
+)

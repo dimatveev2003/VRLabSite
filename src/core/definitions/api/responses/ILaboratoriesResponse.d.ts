@@ -1,0 +1,3 @@
+interface ILaboratoriesResponse {
+    laboratories: ILaboratoryModel[];
+}

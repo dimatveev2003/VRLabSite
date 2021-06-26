@@ -1,0 +1,3 @@
+interface ISaveClientInfoResponse {
+	isSuccess: boolean;
+}

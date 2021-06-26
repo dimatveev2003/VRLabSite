@@ -1,0 +1,17 @@
+$b: ".layout";
+
+#{$b} {
+    background: #edeef0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__content {
+        padding-top: 60px;
+        max-width: 1400px;
+        margin: 0 auto;
+        background: white;
+        min-height: calc(100vh - 150px);
+
+    }
+}

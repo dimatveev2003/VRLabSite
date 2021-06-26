@@ -1,0 +1,3 @@
+interface IChangePasswordRequest {
+	newPassword: string;
+}

@@ -1,0 +1,48 @@
+$b: ".modal";
+
+#{$b} {
+	font-family: "Roboto", Arial, sans-serif;
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		top: 0;
+		font-size: 24px;
+		padding: 0 7px;
+		background: $darkOrangeColor;
+		color: white;
+	}
+
+	&__title {
+		font-size: 24px;
+		color: $darkOrangeColor;
+		text-align: center;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+
+	&__text {
+		padding: 10px 20px;
+		text-indent: 1.5em;
+        text-align: justify;
+        margin-bottom: 20px;
+        line-height: 1.5;
+	}
+}
+
+.popup-content {
+	position: relative;
+	margin: auto;
+	pointer-events: auto;
+	background: white;
+	color: black;
+	border: 1px solid $darkOrangeColor;
+	padding: 0.5rem;
+	min-width: 30%;
+    max-width: 50%;
+}
+
+.popup-overlay {
+	background: rgba(0, 0, 0, 0.5);
+}

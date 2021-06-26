@@ -8,7 +8,8 @@ export const registrationDefaultState: IRegistrationPageState = {
 	isFetch: false,
 	organizationName: "",
 	email: "",
-	phone: ""
+	phone: "",
+	isSuccess: false
 };
 
 type Actions = ReturnType<InferValuesTypes<typeof actions>>;
@@ -27,7 +28,17 @@ export default function reducer(state: IGlobalAppState, action: Actions) {
 		}
 
 		case types.REGISTRATION_FETCH: {
-			newState.registrationPage = Object.assign({}, state.registrationPage, { isFetch: action.payload.value } as IRegistrationPageState);
+			newState.registrationPage = Object.assign({}, state.registrationPage, {
+				isFetch: action.payload.value
+			} as IRegistrationPageState);
+
+			return newState;
+		}
+
+		case types.REGISTRATION_SUCCESS: {
+			newState.registrationPage = Object.assign({}, state.registrationPage, {
+				isSuccess: action.payload.value
+			} as IRegistrationPageState);
 
 			return newState;
 		}

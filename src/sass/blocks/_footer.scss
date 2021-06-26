@@ -1,0 +1,44 @@
+$b: ".footer";
+
+#{$b} {
+	max-width: 100%;
+
+	&__lower {
+		min-height: 90px;
+		background: $darkOrangeColor;
+	}
+
+	&__lower-content {
+		padding: 0;
+		max-width: 1400px;
+		margin: 0 auto;
+		color: white;
+
+		&_info {
+			display: inline-block;
+			font-family: "Roboto", Arial, sans-serif;
+			font-size: 14px;
+			line-height: 21px;
+			margin: 24px 0 0 20px;
+		}
+
+		&_social {
+			float: right;
+			padding: 0 10px;
+			font-family: "Roboto", Arial, sans-serif;
+			font-size: 14px;
+			line-height: 21px;
+			margin: 24px 0 0 20px;
+			display: flex;
+
+			a {
+				margin: 0 5px;
+			}
+		}
+
+		&_phone {
+			padding: 8px 0;
+			margin-right: 20px;
+		}
+	}
+}

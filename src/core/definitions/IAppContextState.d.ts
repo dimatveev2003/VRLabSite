@@ -12,4 +12,6 @@ interface IAppContextState {
 	pageNavigationState?: string;
 	/** ОШиибки приложения */
 	error?: any;
+	/** Информация о клиенте */
+	client?: IClientInfo;
 }

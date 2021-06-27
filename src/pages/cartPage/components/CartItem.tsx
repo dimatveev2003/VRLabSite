@@ -1,18 +1,18 @@
 import { getTypeString } from "core/business/cartBusiness";
 import { CartBlock } from "core/components/helpers/BlockHelpers";
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from "@material-ui/icons/Delete";
 import { useDispatch } from "core/business/hooks/commonHooks";
 import { removeProductAction } from "../reducer/cartActions";
 
-const CartItem = (props: { item: ICartProduct, index: number }) => {
+const CartItem = (props: { item: ICartProduct; index: number }) => {
 	const { item, index } = props;
-    const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
 	const typeString = getTypeString(item.type);
 
-    const handleClickRemove = () => {
-        dispatch(removeProductAction(item));
-    }
+	const handleClickRemove = () => {
+		dispatch(removeProductAction(item));
+	};
 
 	return (
 		<CartBlock element="item">
@@ -28,10 +28,13 @@ const CartItem = (props: { item: ICartProduct, index: number }) => {
 					{`Тип: ${typeString}`}
 				</CartBlock>
 			</CartBlock>
-            
-            <CartBlock onClick={handleClickRemove} isMainBlock={false} element="item" modifier="remove">
-                <DeleteIcon style={{ color: "#ffa273" }} />
-            </CartBlock>
+			<CartBlock
+				isMainBlock={false}
+				element="item"
+				modifier="price">{`${item.price.price} ${item.price.currency.currencySymbol}`}</CartBlock>
+			<CartBlock onClick={handleClickRemove} isMainBlock={false} element="item" modifier="remove">
+				<DeleteIcon style={{ color: "#ffa273" }} />
+			</CartBlock>
 		</CartBlock>
 	);
 };

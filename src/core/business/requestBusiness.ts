@@ -31,11 +31,6 @@ export const getChangePasswordRequest = (page: IHomePageState): IChangePasswordR
 };
 
 export const getCreateOrderRequest = (page: ICartPageState): ICreateOrderRequest => {
-	const reducer = (accum: any, current: IPriceModel) => accum + current.price;
-
-	const prices = page.products.map((p) => p.price);
-	const sum = prices.reduce(reducer);
-
 	const items = page.products.map((p) => {
 		return {
 			type: p.type,
@@ -44,8 +39,8 @@ export const getCreateOrderRequest = (page: ICartPageState): ICreateOrderRequest
 	});
 
 	return {
-		amount: sum as number,
+		amount: page.amount,
 		orderItems: items,
-		currencyId: prices[0].currency.id
+		currencyId: page.currencyId
 	};
 };

@@ -12,4 +12,6 @@ interface IApiMethods {
 	saveClientInfo: (request: ISaveClientInfoRequest) => Promise<ISaveClientInfoResponse>;
 
 	changePassword: (request: IChangePasswordRequest) => Promise<IChangePasswordResponse>;
+
+	createOrder: (request: ICreateOrderRequest) => Promise<ICreateOrderResponse>;
 }

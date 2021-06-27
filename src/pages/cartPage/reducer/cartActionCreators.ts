@@ -1,7 +1,7 @@
 import ProductTypes from "core/enum/ProductTypes";
 import * as types from "./cartActionTypes";
 
-export function addProductActionCreator(product: any) {
+export function addProductActionCreator(product: ICartProduct) {
 	return {
 		type: types.ADD_PRODUCT,
 		payload: {
@@ -31,6 +31,15 @@ export function createOrderSuccessActionCreator(isSuccess: boolean) {
 		type: types.CREATE_ORDER_SUCCESS,
 		payload: {
 			isSuccess
+		}
+	} as const;
+}
+
+export function setOrderNumberActionCreator(orderNumber: number) {
+	return {
+		type: types.SET_ORDER_NUMBER,
+		payload: {
+			orderNumber
 		}
 	} as const;
 }

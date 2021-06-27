@@ -4,6 +4,14 @@ export default class ApiMethods implements IApiMethods {
 	constructor(apiClient: IApiClient) {
 		this.apiClient = apiClient;
 	}
+	createOrder = (request: ICreateOrderRequest) => {
+		const result = this.apiClient.post<ICreateOrderRequest, ICreateOrderResponse>(
+			"/personal-area/order/create-order",
+			request
+		);
+
+		return result;
+	};
 
 	changePassword = (request: IChangePasswordRequest) => {
 		const result = this.apiClient.post<IChangePasswordRequest, IChangePasswordResponse>(
